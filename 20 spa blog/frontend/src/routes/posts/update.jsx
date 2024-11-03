@@ -20,8 +20,6 @@ export default function Update() {
         setContent(data.post.content);
       } catch (err) {
         setError(err.message);
-      } finally {
-        setLoading(false);
       }
     };
 

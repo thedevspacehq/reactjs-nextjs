@@ -10,11 +10,10 @@ export default function Navbar() {
           className="hover:underline hover:underline-offset-1">
           GitHub
         </a>
-        <a href={"/"} className="hover:underline hover:underline-offset-1">
-          Link
-        </a>
-        <a href={"/"} className="hover:underline hover:underline-offset-1">
-          Link
+        <a
+          href={"/posts/new"}
+          className="hover:underline hover:underline-offset-1">
+          New Post
         </a>
       </div>
     </nav>

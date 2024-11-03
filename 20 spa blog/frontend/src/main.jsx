@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import New from "./routes/posts/new";
 import Show from "./routes/posts/show";
+import Update from "./routes/posts/update";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/posts/update/:id",
-    element: <New />,
+    element: <Update />,
   },
 ]);
 

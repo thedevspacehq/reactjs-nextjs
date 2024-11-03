@@ -30,7 +30,7 @@ export default function New() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-md">
+    <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6 text-center">Create a New Post</h1>
       {successMessage && (
         <p className="text-green-600 mb-4">{successMessage}</p>

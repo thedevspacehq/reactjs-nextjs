@@ -49,6 +49,25 @@ export default function Update() {
     }
   };
 
+  const handleDelete = async () => {
+    try {
+      const response = await fetch(`http://localhost:3001/posts/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete post");
+      }
+
+      const data = await response.json();
+      setSuccessMessage(`Post deleted.`);
+      setTitle("");
+      setContent("");
+    } catch (err) {
+      setErrorMessage(err.message);
+    }
+  };
+
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6 text-center">Update "{title}"</h1>
@@ -82,6 +101,12 @@ export default function Update() {
           Update Post
         </button>
       </form>
+
+      <button
+        onClick={handleDelete}
+        className="w-full bg-red-600 text-white font-bold py-2 px-4 rounded-md hover:bg-red-700 transition">
+        Delete
+      </button>
     </div>
   );
 }
